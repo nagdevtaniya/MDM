@@ -1,0 +1,27 @@
+<project name="banking" default="savings">
+
+    <!-- Initial message -->
+    <echo message="Welcome to the banking project build process"/>
+
+    <!-- Target for Savings Section -->
+    <target name="savings">
+        <echo message="Building the savings module..."/>
+        <!-- Add any compilation, packaging, or testing tasks related to savings here -->
+    </target>
+
+    <!-- Target for Loans Section -->
+    <target name="loans">
+        <echo message="Building the loans module..."/>
+        <!-- Add any tasks related to loans here -->
+    </target>
+
+    <!-- Target for Credit Card Section -->
+    <target name="creditcard">
+        <echo message="Building the credit card module..."/>
+        <!-- Add any tasks related to credit card here -->
+    </target>
+
+    <!-- Final message -->
+    <echo message="Banking project build completed"/>
+
+</project>
