@@ -1,27 +1,16 @@
-<project name="banking" default="savings">
+<project name="SimpleJavaApp" default="compile">
+    <property name="src" location="src"/>
+    <property name="build" location="build"/>
 
-    <!-- Initial message -->
-    <echo message="Welcome to the banking project build process"/>
-
-    <!-- Target for Savings Section -->
-    <target name="savings">
-        <echo message="Building the savings module..."/>
-        <!-- Add any compilation, packaging, or testing tasks related to savings here -->
+    <target name="init">
+        <mkdir dir="${build}"/>
     </target>
 
-    <!-- Target for Loans Section -->
-    <target name="loans">
-        <echo message="Building the loans module..."/>
-        <!-- Add any tasks related to loans here -->
+    <target name="compile" depends="init">
+        <javac srcdir="${src}" destdir="${build}"/>
     </target>
 
-    <!-- Target for Credit Card Section -->
-    <target name="creditcard">
-        <echo message="Building the credit card module..."/>
-        <!-- Add any tasks related to credit card here -->
+    <target name="run" depends="compile">
+        <java classname="Main" classpath="${build}"/>
     </target>
-
-    <!-- Final message -->
-    <echo message="Banking project build completed"/>
-
 </project>
